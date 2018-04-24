@@ -11,13 +11,18 @@
     
 <?php
         //Nom du dossier à scanner
-        $dossier = (empty($_GET['dossier'])) ? '.' : $_GET['dossier'];
+        $dossier = (!isset($_GET['dossier'])) ? '.' : $_GET['dossier'];
         //scandir — Liste les fichiers et dossiers dans un tableau
         $tableau = scandir($dossier);
         //On boucle
         foreach($tableau as $valeur)
         {
-            echo '<a href="'. $valeur .'">'. $valeur .'</a><br/>';
+            if(is_dir($valeur))
+            {
+                echo '<a href="index.php?dossier='. $valeur .'">'. $valeur .'</a><br/>';
+            }   else{
+                echo $valeur . "<br>";
+            }
         }    
 ?>
 
