@@ -11,21 +11,33 @@
     
 <?php
         //Nom du dossier à scanner
-        $dir = (!isset($_GET["dossier"])) ? __DIR__ : $_GET["dossier"];
+        $base_url = "./";
 
-        //scandir — Liste les fichiers et dossiers dans un tableau
-        $tableau = scandir($dir);
-
-        //On boucle
-        foreach($tableau as $filename)
+        if(isset($_GET["dossier"]))
         {
-            $folder = $dir . '/' .$filename;
+            $base_url = $base_url.$_GET['dossier'];
+        }
+
+        //scandir — Liste les fichiers et dossiers dans un tableau.
+        $dirs = array_diff(scandir($base_url), array('.git'));
+        
+        
+        //On boucle
+        foreach($dirs as $filename)
+        {
+            $folder = isset($_GET["dossier"]) . $filename . "/";
+
+            $folder = str_replace("/..", "", $folder);
+            $folder = str_replace("/.", "", $folder);
+           
+
             if(is_dir($folder))
-            { 
-                echo '<a href="index.php?dossier=' . $folder . '">'. $filename .'</a><br/>';
-            } else{
-                echo $filename . "<br>";           
-            }  
+            {       
+                echo '<a href="index.php?dossier=' . $folder . '">'. $filename .'</a><br>';              
+            } else
+                {
+                    echo $filename . "<br>";           
+                }  
         }   
 ?>
 
