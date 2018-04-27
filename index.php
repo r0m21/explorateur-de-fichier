@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <header class="bg-1 h25 d-flex">
+<body class="bg-4">
+    <header class="bg-1 h20 d-flex">
         <h1 class="color-1 fs-50 roboto-bold align-self-center m-auto">EXPLORATOR 3000</h1>
     </header>
 
