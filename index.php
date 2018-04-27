@@ -25,7 +25,7 @@
             {
 ?>
         <div class="box">
-            <img class="dossier taille-image" src="img/folder.png" alt="Dossier">
+            <img class="dossier taille-image" src="img/icon-folder.png" alt="Dossier">
             <a class="dossier textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"><?php echo $filename ?></a>
         </div>    
 <?php                                         
@@ -33,7 +33,7 @@
                 {
 ?>
                 <div class="box">
-                    <img class="dossier taille-image" src="img/parentfolder.png" alt="Fichier">
+                    <img class="dossier taille-image" src="img/icon-parent-folder.png" alt="Fichier">
                     <a class="dossierparent textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"></a>
                 </div>    
 <?php                }
