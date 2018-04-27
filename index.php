@@ -8,13 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
-    <title>Document</title>
+    <title>Explorator 3000</title>
 </head>
-<body class="bg-4">
+<body class="bg-2">
     <header class="bg-1 d-flex">
-
-<img src="img/header.png" alt="header">    
-</header>
+        <img src="img/header.png" alt="header">    
+    </header>
 
     <main class="maincontainer">
         
@@ -27,7 +26,7 @@
 ?>
         <div class="box">
             <img class="taille-image" src="img/icon-folder.png" alt="Dossier">
-            <a class="lienimg textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"><?php echo $filename ?></a>
+            <a class="lienimg color-1 roboto-bold textdecoration-none fs-30" href="index.php?dossier=<?php echo $folder ?>"><?php echo $filename ?></a>
         </div>    
 <?php                                         
             }   else if(is_dir($folder) && $filename == "..")
@@ -35,7 +34,7 @@
 ?>
                 <div class="box">
                     <img class="taille-image" src="img/icon-parent-folder.png" alt="Fichier">
-                    <a class="lienimg textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"></a>
+                    <a class="lienimg color-1 roboto-bold textdecoration-none fs-30" href="index.php?dossier=<?php echo $folder ?>"></a>
                 </div>    
 <?php                }
             else
@@ -45,11 +44,10 @@
 ?>              
                 <div class="box2">
 <?php               echo  '<img class="taille-image m-auto" src="img/icon-'.$ext.'.png" alt="Fichier">'
-?>                      <p class="text-center ml-5 color-1 absolute-fichier"><?php echo $filename ?></p> 
+?>                      <p class="text-center roboto-bold ml-5 color-1 absolute-fichier fs-20"><?php echo $filename ?></p> 
                 </div>     
 <?php                            
                 }
-            
         }   
 ?>
         

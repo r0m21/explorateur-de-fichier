@@ -2,31 +2,30 @@
 
 body{height: 100vh;}
 main{height: 75%;}
-header{height:140px;
-justify-content: center;
-align-items: center;}
+header
+{
+    height:140px;
+    justify-content: center;
+    align-items: center;
+}
+
 /*=================================================================
                         Classe générique
 ==================================================================*/
 
-
-
 /* Position + display */
+
 .relative{position: relative;}
 
 .d-flex{display: flex;}
-.d-inlineblock{display: inline-block;}
-
-
 
 /* Background color & Color */
 
 .color-1{color: white;}
 
 .bg-1{background-color: #242424;}
-.bg-2{background-color: black;}
-.bg-3{background-color: yellow;}
-.bg-4{background-color:#444;}
+
+.bg-2{background-color:#444;}
 
 /* Margin & padding */
 
@@ -34,38 +33,18 @@ align-items: center;}
 
 .ml-5{margin-left:5px;}
 
-/* Flexbox */
-
-.justify-content-around{justify-content: space-around;}
-.justify-content-between{justify-content: space-between;}
-
-.align-self-center{align-self: center;}
-
-.column{flex-direction: column;}
-.row{flex-direction: row;}
-
-.wrap{flex-wrap: wrap;}
-
-/* Width + height */
-
-.w100{width: 100%;}
-.w-half{width: 50%;}
-
-.h20{height: 20%;}
-
 /* Font family + font size */
 
 .roboto-medium{font-family: "Roboto:500", sans-serif;}
 .roboto-bold{font-family: "Roboto:700", sans-serif;}
 
-.fs-50{font-size: 50px;}
-.fs-35{font-size: 35px;}
+.fs-20{font-size: 20px;}
+.fs-30{font-size: 30px;}
 
 /* Text-align & Text decoration */
 
 .text-center{text-align: center;}
-
-
+.textdecoration-none{text-decoration: none;}
 
 /*=================================================================
                         Classe spécifique
@@ -99,9 +78,6 @@ align-items: center;}
 
 .lienimg
 {
-    font-family: "Roboto:500", sans-serif;
-    color: #fff;
-    text-decoration: none;
     position: absolute;
     top: calc(50% - 60px);
     right: 0;
@@ -112,7 +88,6 @@ align-items: center;}
     height: 120px;
     margin: 0 auto;
     line-height: 120px;
-    font-size: 30px;
     transition: all 0.5s ease;
 }
 
@@ -131,14 +106,10 @@ align-items: center;}
 
 .box:hover .lienimg , .box:hover .taille-image{transform: scale(1.5);}
 
-.lienimg:hover
-{
-    color: #c4c4c4;
-}
+.lienimg:hover{color: #c4c4c4;}
 
 .absolute-fichier
 {
-    font-family: "Roboto:700", sans-serif;
     position: absolute;
     bottom: 0;
     left: 0;
