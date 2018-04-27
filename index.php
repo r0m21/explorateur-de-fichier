@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <body class="bg-4">
-    <header class="bg-1 h20 d-flex">
+    <header class="bg-1 d-flex">
 
 <img src="img/header.png" alt="header">    
 </header>
