@@ -41,11 +41,10 @@
                 {
                     $arrayExt = explode('.', $filename); // Si index.php => arrayExt[0] = index, arrayext[1] = php.
                     $ext = $arrayExt[count($arrayExt) - 1];
-?>              <div class="box">
-                    <div class="d-flex column m-auto">
-<?php                   echo  '<img class="taille-image m-auto" src="img/icon-'.$ext.'.png" alt="Fichier">'
-?>                        <p class="text-center ml-5 color-1"><?php echo $filename ?></p>
-                    </div>
+?>              
+                <div class="box2">
+<?php               echo  '<img class="taille-image m-auto" src="img/icon-'.$ext.'.png" alt="Fichier">'
+?>                      <p class="text-center ml-5 color-1 absolute-fichier"><?php echo $filename ?></p> 
                 </div>     
 <?php                            
                 }

@@ -84,13 +84,14 @@ main{height: 75%;}
 
 /* Bloc où se trouve les IMG + Liens */
 
-.box 
+.box,.box2
 {
     width: 200px;
     height: 200px;
     position: relative;
     text-align: center;
 }
+
 
 /* Réglage image + Positionnement des liens sur dossier / fichier */
 
@@ -110,13 +111,9 @@ main{height: 75%;}
     margin: 0 auto;
     line-height: 120px;
     font-size: 30px;
+    transition: all 0.5s ease;
 }
 
-
-.transform:hover{
-    transform:scale(1.2);
-    transition:0.2s;
-}
 .taille-image
 {
     width: 120px;
@@ -132,17 +129,16 @@ main{height: 75%;}
 
 .box:hover .lienimg , .box:hover .taille-image{transform: scale(1.5);}
 
-.dossier:hover
+.lienimg:hover
 {
-    color: #7e7e7e;
+    color: #c4c4c4;
 }
 
-.fichier
+.absolute-fichier
 {
-    font-family: "Roboto:500", sans-serif;
-    color: #fff;
+    font-family: "Roboto:700", sans-serif;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%); 
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
