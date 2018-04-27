@@ -12,8 +12,9 @@
 </head>
 <body class="bg-4">
     <header class="bg-1 h20 d-flex">
-        <h1 class="color-1 fs-50 roboto-bold align-self-center m-auto">EXPLORATOR 3000</h1>
-    </header>
+
+<img src="img/header.png" alt="header">    
+</header>
 
     <main class="maincontainer">
         
