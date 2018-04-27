@@ -25,7 +25,7 @@
             {
 ?>
         <div class="box">
-            <img class="dossier" src="img/folder.png" alt="Dossier">
+            <img class="dossier taille-image" src="img/folder.png" alt="Dossier">
             <a class="dossier textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"><?php echo $filename ?></a>
         </div>    
 <?php                                         
@@ -33,15 +33,15 @@
                 {
 ?>
                 <div class="box">
-                    <img class="dossier w100" src="img/parentfolder.png" alt="Fichier">
+                    <img class="dossier taille-image" src="img/parentfolder.png" alt="Fichier">
                     <a class="dossierparent textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"></a>
                 </div>    
 <?php                }
             else
                 {
-?>              <div>
-                    <img class="w100" src="img/file.png" alt="Fichier">
-                    <p><?php echo $filename ?></p>
+?>              <div class="box">
+                    <img class="taille-image" src="img/icon-php.png" alt="Fichier">
+                    <p class="text-center"><?php echo $filename ?></p>
                 </div>     
 <?php                            
                 }
