@@ -2,7 +2,9 @@
 
 body{height: 100vh;}
 main{height: 75%;}
-
+header{height:140px;
+justify-content: center;
+align-items: center;}
 /*=================================================================
                         Classe générique
 ==================================================================*/
