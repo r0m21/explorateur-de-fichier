@@ -40,8 +40,10 @@
             else
                 {
 ?>              <div class="box">
-                    <img class="taille-image" src="img/icon-php.png" alt="Fichier">
-                    <p class="text-center"><?php echo $filename ?></p>
+                    <div class="d-flex column m-auto">
+                        <img class="taille-image m-auto" src="img/icon-php.png" alt="Fichier">
+                        <p class="text-center ml-5 color-1"><?php echo $filename ?></p>
+                    </div>
                 </div>     
 <?php                            
                 }
