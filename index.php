@@ -24,17 +24,16 @@
             if(is_dir($folder) && $filename != "..")
             {
 ?>
-        <div class="box">
-            <img class="dossier taille-image" src="img/folder.png" alt="Dossier">
-            <a class="dossier textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"><?php echo $filename ?></a>
+        <div class="box transform">
+                        <a class="dossier fs-35 textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"><?php echo $filename ?><img class="dossier taille-image" src="img/icon-folder.png" alt="Dossier"></a>
         </div>    
 <?php                                         
             }   else if(is_dir($folder) && $filename == "..")
                 {
 ?>
-                <div class="box">
-                    <img class="dossier taille-image" src="img/parentfolder.png" alt="Fichier">
-                    <a class="dossierparent textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"></a>
+                <div class="box transform">
+                    
+                    <a class="dossierparent fs-35 textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"><img class="dossier taille-image" src="img/icon-parent.png" alt="Fichier"></a>
                 </div>    
 <?php                }
             else
