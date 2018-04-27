@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <header class="bg-1 h25 d-flex">
+<body class="bg-4">
+    <header class="bg-1 h20 d-flex">
         <h1 class="color-1 fs-50 roboto-bold align-self-center m-auto">EXPLORATOR 3000</h1>
     </header>
 
@@ -25,24 +25,26 @@
             {
 ?>
         <div class="box">
-            <img class="dossier taille-image" src="img/icon-folder.png" alt="Dossier">
-            <a class="dossier textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"><?php echo $filename ?></a>
+            <img class="taille-image" src="img/icon-folder.png" alt="Dossier">
+            <a class="lienimg textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"><?php echo $filename ?></a>
         </div>    
 <?php                                         
             }   else if(is_dir($folder) && $filename == "..")
                 {
 ?>
                 <div class="box">
-                    <img class="dossier taille-image" src="img/icon-parent-folder.png" alt="Fichier">
-                    <a class="dossierparent textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"></a>
+                    <img class="taille-image" src="img/icon-parent-folder.png" alt="Fichier">
+                    <a class="lienimg textdecoration-none" href="index.php?dossier=<?php echo $folder ?>"></a>
                 </div>    
 <?php                }
             else
                 {
+                    $arrayExt = explode('.', $filename); // Si index.php => arrayExt[0] = index, arrayext[1] = php.
+                    $ext = $arrayExt[count($arrayExt) - 1];
 ?>              <div class="box">
                     <div class="d-flex column m-auto">
-                        <img class="taille-image m-auto" src="img/icon-php.png" alt="Fichier">
-                        <p class="text-center ml-5 color-1"><?php echo $filename ?></p>
+<?php                   echo  '<img class="taille-image m-auto" src="img/icon-'.$ext.'.png" alt="Fichier">'
+?>                        <p class="text-center ml-5 color-1"><?php echo $filename ?></p>
                     </div>
                 </div>     
 <?php                            

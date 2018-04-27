@@ -9,7 +9,5 @@
 
         //scandir — Liste les fichiers et dossiers dans un tableau.
         $dirs = array_diff(scandir($base_url), array('.git', "."));
-        
-        //On boucle
-        
+       
 ?>
