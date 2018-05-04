@@ -1,5 +1,4 @@
-<?php require_once("php/traitement.php") ?>
-
+<?php require_once 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,44 +14,26 @@
         <img src="img/header.png" alt="header">    
     </header>
 
-    <main class="maincontainer">
+    <main class="maincontainer" id="container">
         
-<?php        foreach($dirs as $filename)
-        {
-            $folder = $base_url . $filename . "/";
-         
-            if(is_dir($folder) && $filename != "..")
-            {
-?>
-        <div class="box">
-            <img class="taille-image" src="img/icon-folder.png" alt="Dossier">
-            <a class="lienimg color-1 roboto-bold textdecoration-none fs-30" href="index.php?dossier=<?php echo $folder ?>"><?php echo $filename ?></a>
-        </div>    
-<?php                                         
-            }   else if(is_dir($folder) && $filename == "..")
-                {
-?>
+<?php   $dirs = new RecursiveDirectoryIterator(BASE_DIR);       
+        $dirs->rewind();
+    
+        while($dirs->valid()){
+            if($dirs->getFilename() != '.' && $dirs->getFilename() != '..'){ ?>
                 <div class="box">
-                    <img class="taille-image" src="img/icon-parent-folder.png" alt="Fichier">
-                    <a class="lienimg color-1 roboto-bold textdecoration-none fs-30" href="index.php?dossier=<?php echo $folder ?>"></a>
-                </div>    
-<?php                }
-            else
-                {
-                    $arrayExt = explode('.', $filename); // Si index.php => arrayExt[0] = index, arrayext[1] = php.
-                    $ext = $arrayExt[count($arrayExt) - 1];
-?>              
-                <div class="box2">
-<?php               echo  '<img class="taille-image m-auto" src="img/icon-'.$ext.'.png" alt="Fichier">'
-?>                      <p class="text-center roboto-bold ml-5 color-1 absolute-fichier fs-20"><?php echo $filename ?></p> 
-                </div>     
-<?php                            
-                }
-        }   
-?>
-        
+<?php               if(is_dir($dirs->key())){ ?>
+                        <img class="taille-image" src="img/icon-folder.png" alt="Dossier">
+                        <a class="lienimg color-1 roboto-bold textdecoration-none fs-30" href="<?php echo $dirs->key() ?>"><?php echo $dirs->getFilename() ?></a>
+<?php               } else { ?>
+                        <img class="taille-image notransform m-auto" src="img/icon-<?php echo $dirs->getExtension() ?>.png" alt="Fichier">
+                        <p class="text-center roboto-bold ml-5 color-1 absolute-fichier fs-20"><?php echo $dirs->getFilename() ?></p>
+<?php               } ?>            
+                </div>
+<?php       }
+            $dirs->next();    
+        } ?>
     </main>
-
-        <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
     </body>
 </html>

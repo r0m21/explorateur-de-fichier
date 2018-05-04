@@ -65,7 +65,7 @@ header
 
 /* Bloc où se trouve les IMG + Liens */
 
-.box,.box2
+.box
 {
     width: 200px;
     height: 200px;
@@ -104,7 +104,9 @@ header
     z-index: 2
 }
 
+
 .box:hover .lienimg , .box:hover .taille-image{transform: scale(1.5);}
+.box:hover .notransform{transform: scale(1);}
 
 .lienimg:hover{color: #c4c4c4;}
 
